@@ -26,10 +26,6 @@ pre,code,kbd,samp,tt {font-family:monospace;*font-size:108%;line-height:100%;}
 
 /* ~~~~~~~~~~ BASIC STYLE ~~~~~~~~~~ */
 
-html, body {
-    height: 100%;
-}
-
 body {
     background: #F8F8EA url(../images/bg.png) top repeat-x;
     font-family: Arial, Helvetica, sans-serif;
