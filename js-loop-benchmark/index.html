@@ -102,16 +102,14 @@ function run(f) {
     return (new Date()).getTime() - t;
 }
 
-(function() {
+window.onload = function() {
     $("#forloop4").html( run(forloop4) );
     $("#forloop3").html( run(forloop3) );
     $("#forloop2").html( run(forloop2) );
     $("#forloop1").html( run(forloop1) );
     $("#iter").html( run(iter) );
     $("#nocalc").html( run(nocalc) );
-}());
-
-
+};
         </script>
     </body>
 </html>
