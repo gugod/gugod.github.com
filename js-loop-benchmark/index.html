@@ -93,13 +93,13 @@ function forloop4() {
 function run(f) {
     var i, t;
 
-    t = Date.now();
+    t = (new Date()).getTime();
 
     for(i = 0; i < 100000; i ++) {
         f();
     }
 
-    return Date.now() - t;
+    return (new Date()).getTime() - t;
 }
 
 (function() {
