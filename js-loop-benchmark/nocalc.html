@@ -1,0 +1,39 @@
+<!doctype html!>
+<html>
+    <head>
+        <title>Loop Benchmark</title>
+        <script type="text/javascript" src="jquery.min.js"></script>
+    </head>
+    <body>
+        <article id="answer"></article>
+
+        <script type="text/javascript">           
+
+function nocalc() {
+    return 55;
+}
+
+function run(f) {
+    var i, t;
+
+    t = (new Date()).getTime();
+
+    for(i = 0; i < 100000; i ++) {
+        f();
+    }
+
+    return (new Date()).getTime() - t;
+}
+
+window.onload = function() {
+    var answer = run(nocalc);
+    $("#answer").html( answer );
+
+    if (window.parent != window) {
+        window.parent.finish("nocalc", answer);
+    }
+};
+        </script>
+
+    </body>
+</html>
