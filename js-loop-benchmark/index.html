@@ -20,7 +20,6 @@ var benchmarks = {
 function finish(name, answer) {
     $('#' + name).html(answer);
     var next_name = benchmarks.next();
-
     if (next_name) {
         $('<iframe src="' + next_name + '.html">').appendTo("body");
     }
