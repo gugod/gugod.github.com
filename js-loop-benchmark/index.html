@@ -9,7 +9,7 @@ var benchmarks = {
     names: ["nocalc", "jquery-each", "forloop1", 'forloop2', 'forloop3', 'forloop4'],
     current: -1,
     next: function() {
-        this.current++;
+        this.current += 1;
         if (this.current >= this.names.length) {
             return null;
         }
@@ -19,7 +19,6 @@ var benchmarks = {
 
 function finish(name, answer) {
     $('#' + name).html(answer);
-    $('iframe').remove();
     var next_name = benchmarks.next();
 
     if (next_name) {
